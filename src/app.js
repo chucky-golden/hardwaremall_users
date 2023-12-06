@@ -10,8 +10,7 @@ const app = express()
 expressApp(app)
 
 app.listen(PORT, () => {
-    console.log(PORT);
-    console.log('user running...')
+    console.log(`user running... on port: ${PORT}`)
 })
 .on('error', (err) => {
     console.log(err)
