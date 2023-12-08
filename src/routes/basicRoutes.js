@@ -4,7 +4,7 @@ const searchcontroller = require('../controllers/searchcontroller')
 
 router.get('/products', basicController.findProducts)
 router.get('/products/:slug', basicController.findProductWithSlug)
-router.get('/topProduct', basicController.topProduct)
+router.get('/topproduct', basicController.topProduct)
 
 router.get('/vendors', basicController.findVendors)
 router.get('/vendors/:slug', basicController.findVendorWithSlug)
