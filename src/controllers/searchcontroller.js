@@ -3,7 +3,7 @@ const axios = require('axios')
 
 // fetch products
 const search = async (req, res) => {
-    let response = await axios.post('https://gateway-6ew9.onrender.com/admin/search/', {
+    let response = await axios.post('https://admin-dqcw.onrender.com/search/', {
         q: req.body.q,
         tab: req.body.tab,
         start: req.body.start,

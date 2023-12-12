@@ -3,7 +3,7 @@ const axios = require('axios')
 // fetch all product
 const findProducts = async (req, res) => {
     try {
-        let response = await axios.get('https://gateway-6ew9.onrender.com/admin/users/products')
+        let response = await axios.get('https://admin-dqcw.onrender.com/users/products')
         
         if(response.data.foundproducts !== null){
             res.json({ products: response.data.foundproducts })
@@ -22,7 +22,7 @@ const findProducts = async (req, res) => {
 const findProductWithSlug = async (req, res) => {
     try{ 
         let slug = req.params.slug
-        let response = await axios.post('https://gateway-6ew9.onrender.com/admin/users/productsslug', {
+        let response = await axios.post('https://admin-dqcw.onrender.com/users/productsslug', {
             slug: slug
         })
         if(response.data.data !== null){
@@ -41,7 +41,7 @@ const findProductWithSlug = async (req, res) => {
 // fetch the top 8 most imported product
 const topProduct = async (req, res) => {
     try{ 
-        let response = await axios.get('https://gateway-6ew9.onrender.com/admin/users/topproducts')
+        let response = await axios.get('https://admin-dqcw.onrender.com/users/topproducts')
         
         if(response.data.foundproducts !== null){
             res.json({ products: response.data.foundproducts })
@@ -59,7 +59,7 @@ const topProduct = async (req, res) => {
 // fetch video
 const findVideo = async (req, res) => {
     try{
-        let response = await axios.get('https://gateway-6ew9.onrender.com/admin/users/findvideo')
+        let response = await axios.get('https://admin-dqcw.onrender.com/users/findvideo')
         
         if(response.data.foundvideos !== null){
             res.json({ video: response.data.foundvideos })
@@ -79,7 +79,7 @@ const findVideo = async (req, res) => {
 // fetch vendors
 const findVendors = async (req, res) => {
     try{
-        let response = await axios.get('https://gateway-6ew9.onrender.com/vendors/users/vendors')
+        let response = await axios.get('https://vendors-jpnc.onrender.com/users/vendors')
             
         if(response.data.foundvendors !== null){
             res.json({ vendors: response.data.foundvendors })
@@ -98,7 +98,7 @@ const findVendors = async (req, res) => {
 const findVendorWithSlug = async (req, res) => {
     try{
         let slug = req.params.slug
-        let response = await axios.post('https://gateway-6ew9.onrender.com/vendors/users/vendorslug', {
+        let response = await axios.post('https://vendors-jpnc.onrender.com/users/vendorslug', {
             slug: slug
         })
         if(response.data.data !== null){
@@ -118,7 +118,7 @@ const findVendorWithSlug = async (req, res) => {
 // fetch top 8 vendors
 const findTopVendors = async (req, res) => {
     try{
-        let response = await axios.get('https://gateway-6ew9.onrender.com/vendors/users/topvendors')
+        let response = await axios.get('https://vendors-jpnc.onrender.com/users/topvendors')
             
         if(response.data.foundvendors !== null){
             res.json({ vendors: response.data.foundvendors })
@@ -138,7 +138,7 @@ const findTopVendors = async (req, res) => {
 const upCallLead = async (req, res) => {
     try{
         let slug = req.params.slug
-        let response = await axios.post('https://gateway-6ew9.onrender.com/vendors/users/calllead', {
+        let response = await axios.post('https://vendors-jpnc.onrender.com/users/calllead', {
             slug: slug
         })
         if(response.data.message !== ''){
@@ -158,7 +158,7 @@ const upCallLead = async (req, res) => {
 const upMessageLead = async (req, res) => {
     try{
         let slug = req.params.slug
-        let response = await axios.post('https://gateway-6ew9.onrender.com/vendors/users/messagelead', {
+        let response = await axios.post('https://vendors-jpnc.onrender.com/users/messagelead', {
             slug: slug
         })
         if(response.data.message !== ''){
