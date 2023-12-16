@@ -22,7 +22,7 @@ const findProducts = async (req, res) => {
 const findProductWithSlug = async (req, res) => {
     try{ 
         let slug = req.params.slug
-        console.log('data', slug)
+        
         let response = await axios.post('https://admin-dqcw.onrender.com/users/productsslug', {
             slug: slug
         })
