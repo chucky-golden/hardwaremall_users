@@ -99,6 +99,8 @@ const findVendors = async (req, res) => {
 const findVendorWithSlug = async (req, res) => {
     try{
         let slug = req.params.slug
+        console.log('sluf', slug)
+        
         let response = await axios.post('https://vendors-jpnc.onrender.com/users/vendorslug', {
             slug: slug
         })
