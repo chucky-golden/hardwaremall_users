@@ -44,8 +44,8 @@ const topProduct = async (req, res) => {
     try{ 
         let response = await axios.get('https://admin-dqcw.onrender.com/users/topproducts')
         
-        if(response.data.foundproducts !== null){
-            res.json({ products: response.data.foundproducts })
+        if(response.data.message !== null){
+            res.json({ products: response.data.message })
         }else{
             res.json({ message: 'no product uploaded yet' })
         }
